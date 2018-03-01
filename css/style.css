@@ -9,17 +9,6 @@ main {
     font-family: 'PT Sans', sans-serif;
 }
 
-.experience-container {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    border: solid black;
-    width: 85%;
-    margin-top: 20px;
-    
-    
-}
 
 .experience-topvenn {
     display: flex;
@@ -64,24 +53,25 @@ p {
     width: 300px;
     height: 300px;
     position: relative;
+    bottom: -50px;
 }
 
 .me {
     position: relative;
     top: -130px;
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
     border: solid black 1px;
     z-index: 1;
     position: relative;
-    top: -140px;
+    top: -15px;
     
 }
 
 .label {
     position: relative;
-    top: 160px;
+    top: 150px;
 }
 
 .sales-label {
@@ -105,6 +95,7 @@ p {
     background: rgba(255, 255, 0, .5);
     animation: moveright 2s;
     left: -200px;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
 }
 @keyframes moveright {
@@ -120,7 +111,7 @@ p {
     left: 200px;
     animation: moveleft 2s;
     background:rgba(255, 0, 0, .5);
-    animation-delay: 2s;
+    animation-delay: 6s;
     animation-fill-mode: forwards;
     
 }
@@ -135,20 +126,82 @@ p {
   }
 
   .product-management {
-    bottom: 1px;
+    bottom: -100px;
     background: rgba(0, 0, 255, .5);
     animation: moveup 2s;
-    animation-delay: 4s;
+    animation-delay: 8s;
     animation-fill-mode: forwards;
 }
 
 @keyframes moveup {
     0% {
-      bottom: 0px;
+      bottom: -50px;
     }
     100% {
-    bottom: 250px;
+    bottom: 130px;
     }
+  }
+
+
+
+  .experience-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    background: white;
+    top: 0px;
+    animation: hideafter;
+    animation-delay: 12s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideafter {
+    0% {
+      visibility: visible;
+    }
+    100% {
+    visibility: hidden;
+    }
+  }
+
+
+  .typewriter{
+    position: relative;
+    top: 250px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid black; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2s steps(40, end),
+      blink-caret .75s step-end infinite,
+      move-label 2s forwards 3s;
+  }
+
+  @keyframes move-label {
+    0% {
+      top: 250px;
+    }
+    100% {
+    top: 10px;
+    }
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 275px }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
   }
 
 
