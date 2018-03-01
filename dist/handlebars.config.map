@@ -1,0 +1,1 @@
+{"version":3,"sources":["handlebars.config.js"],"names":["module","exports","layouts","partials"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAAA,OAAOC,OAAP,GAAiB;AACfC,WAAS,SADM;AAEfC,YAAU;AAFK,CAAjB","file":"handlebars.config.map","sourcesContent":["module.exports = {\n  layouts: 'layouts',\n  partials: 'partials'\n}\n"]}
