@@ -58,6 +58,7 @@ p {
 
 .me {
     position: relative;
+    visibility: hidden;
     top: -130px;
     height: 120px;
     width: 120px;
@@ -66,8 +67,20 @@ p {
     z-index: 1;
     position: relative;
     top: -15px;
+    /* animation: make-hidden; */
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
     
 }
+
+/* @keyframes make-hidden {
+    0% {
+      visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+  } */
 
 .label {
     position: relative;
@@ -138,7 +151,7 @@ p {
       bottom: -50px;
     }
     100% {
-    bottom: 130px;
+    bottom: 200px;
     }
   }
 
